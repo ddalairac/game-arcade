@@ -1,21 +1,3 @@
-//Create a Pixi Application
-// http://pixijs.download/release/docs/PIXI.Application.html
-let app = new PIXI.Application({
-    width: 256,         // default: 800
-    height: 256,        // default: 600
-    antialias: true,    // default: false
-    transparent: false, // default: false
-    resolution: 1       // default: 1
-});
-
-// Fit windows size
-app.renderer.view.style.position = "absolute";
-app.renderer.view.style.display = "block";
-app.renderer.autoResize = true;
-app.renderer.resize(window.innerWidth, window.innerHeight)
-
-//Add the canvas that Pixi automatically created for you to the HTML document
-document.body.appendChild(app.view);
 
 //load an image and run the `setup` function when it's done
 PIXI.loader

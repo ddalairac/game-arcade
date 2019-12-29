@@ -1,0 +1,206 @@
+{"frames": {
+
+"Jungle-Tileset_0000_floor_under.png":
+{
+	"frame": {"x":1617,"y":65,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0001_floor_cornerUp.png":
+{
+	"frame": {"x":1699,"y":65,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0001_floor_cornerUp2.png":
+{
+	"frame": {"x":998,"y":155,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0002_floor_tip.png":
+{
+	"frame": {"x":1080,"y":155,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0002_floor_tip2.png":
+{
+	"frame": {"x":1162,"y":155,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0003_floor_diagonal.png":
+{
+	"frame": {"x":1244,"y":155,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0003_floor_diagonal2.png":
+{
+	"frame": {"x":1326,"y":149,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0004_floor.png":
+{
+	"frame": {"x":1408,"y":149,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0005_floor_crag.png":
+{
+	"frame": {"x":1490,"y":147,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0006_floor_cragTip.png":
+{
+	"frame": {"x":1734,"y":147,"w":80,"h":77},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":77},
+	"sourceSize": {"w":80,"h":77}
+},
+"Jungle-Tileset_0006_floor_cragTip2.png":
+{
+	"frame": {"x":1781,"y":1,"w":80,"h":77},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":77},
+	"sourceSize": {"w":80,"h":77}
+},
+"Jungle-Tileset_0007_floor_underTip.png":
+{
+	"frame": {"x":1781,"y":80,"w":65,"h":80},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":80},
+	"sourceSize": {"w":65,"h":80}
+},
+"Jungle-Tileset_0007_floor_underTip2.png":
+{
+	"frame": {"x":1813,"y":147,"w":65,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":80},
+	"sourceSize": {"w":65,"h":80}
+},
+"Jungle-Tileset_0008_barrel.png":
+{
+	"frame": {"x":1654,"y":147,"w":78,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":80},
+	"sourceSize": {"w":78,"h":80}
+},
+"Jungle-Tileset_0009_box.png":
+{
+	"frame": {"x":1572,"y":147,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"Jungle-Tileset_0010_bg_trees.png":
+{
+	"frame": {"x":424,"y":1,"w":418,"h":236},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":418,"h":236},
+	"sourceSize": {"w":418,"h":236}
+},
+"Jungle-Tileset_0011_bg.png":
+{
+	"frame": {"x":1,"y":1,"w":421,"h":235},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":421,"h":235},
+	"sourceSize": {"w":421,"h":235}
+},
+"Jungle-Tileset_0012_under.png":
+{
+	"frame": {"x":1306,"y":1,"w":155,"h":146},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":146},
+	"sourceSize": {"w":155,"h":146}
+},
+"Jungle-Tileset_0013_under_col1.png":
+{
+	"frame": {"x":844,"y":1,"w":152,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":152},
+	"sourceSize": {"w":152,"h":152}
+},
+"Jungle-Tileset_0014_under_col2.png":
+{
+	"frame": {"x":998,"y":1,"w":152,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":152},
+	"sourceSize": {"w":152,"h":152}
+},
+"Jungle-Tileset_0015_under_col3.png":
+{
+	"frame": {"x":1463,"y":1,"w":144,"h":152},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":152},
+	"sourceSize": {"w":144,"h":152}
+},
+"Jungle-Tileset_0016_under_col4.png":
+{
+	"frame": {"x":1152,"y":1,"w":152,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":152},
+	"sourceSize": {"w":152,"h":152}
+},
+"Jungle-Tileset_0017_under_tip1.png":
+{
+	"frame": {"x":844,"y":155,"w":65,"h":152},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":152},
+	"sourceSize": {"w":65,"h":152}
+},
+"Jungle-Tileset_0018_under_tip2.png":
+{
+	"frame": {"x":1617,"y":1,"w":62,"h":152},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":152},
+	"sourceSize": {"w":62,"h":152}
+}},
+"animations": {
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Jungle-Tileset.png",
+	"format": "RGBA8888",
+	"size": {"w":1879,"h":238},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:37e7e3ffcf55ba5234388fd978b08d43:0fd387b2599a7b0359a5dc0e802b15d1:3d1f5a935f1621fd0ec9ab0fb9feeaca$"
+}
+}
