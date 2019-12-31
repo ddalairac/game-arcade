@@ -16,28 +16,28 @@ function setup() {
 
     //Left 
     left.press = () => {
-        //Change the barrel's velocity when the key is pressed
-        barrel.vx = -5;
+        //Change the character's velocity when the key is pressed
+        character.vx = -5;
     };
 
     //Left 
     left.release = () => {
-        //Stop the barrel
-        barrel.vx = 0;
+        //Stop the character
+        character.vx = 0;
     };
 
  
     //Right
     right.press = () => {
-        barrel.vx = 5;
+        character.vx = 5;
     };
     right.release = () => {
-        barrel.vx = 0;
+        character.vx = 0;
     };
 
     //Up
     up.press = () => {
-        barrel.vy = -15
+        character.vy = -15
     };
     up.release = () => {
         // se resuelve en el loop
@@ -56,28 +56,28 @@ function gameLoop(delta) {
 }
 
 function play(delta) {
-    //Use the barrel's velocity to make it move
+    //Use the character's velocity to make it move
 
     // move Horizontal
-    barrel.x += barrel.vx;
+    character.x += character.vx;
 
-    if (barrel.x > window.innerWidth) {
-        barrel.x = -80
+    if (character.x > window.innerWidth) {
+        character.x = -80
     }
 
-    if (barrel.x < -80) {
-        barrel.x = window.innerWidth
+    if (character.x < -80) {
+        character.x = window.innerWidth
     }
     // move Vertical
-    if (barrel.vy < 0 || barrel.y < 159) {
-        barrel.vy += 1
+    if (character.vy < 0 || character.y < 159) {
+        character.vy += 1
     }
-    if (barrel.y > 160) {
-        barrel.vy = 0
-        barrel.y = 160
+    if (character.y > 160) {
+        character.vy = 0
+        character.y = 160
         level.y = 5 // vibracion piso
     } else {
         level.y = 0
     }
-    barrel.y += barrel.vy
+    character.y += character.vy
 }

@@ -47,15 +47,15 @@ function setLevel(textures) {
 
 }
 
-let barrel
+let character
 function setCharacter(textures) {
-    let tx_barrel = textures["Jungle-Tileset_0008_barrel.png"];
-    barrel = new PIXI.Sprite(tx_barrel);
-    barrel.y = 0
-    barrel.x = window.innerWidth / 2
-    barrel.vx = 0;
-    barrel.vy = 0;
-    app.stage.addChild(barrel);
+    let tx_character = textures["Jungle-Tileset_0008_barrel.png"];
+    character = new PIXI.Sprite(tx_character);
+    character.y = 0
+    character.x = window.innerWidth / 2
+    character.vx = 0;
+    character.vy = 0;
+    app.stage.addChild(character);
 }
 
 //Capture the keyboard arrow keys
@@ -63,31 +63,32 @@ let left = keyboard("ArrowLeft"),
     up = keyboard("ArrowUp"),
     right = keyboard("ArrowRight")
     
+
 function events() {
     left.press = () => {
-        barrel.vx = -5;
+        character.vx = -5;
         this.press = "left"
     };
     left.release = () => {
         if (this.press == "left") {
             this.press = undefined
-            barrel.vx = 0;
+            character.vx = 0;
         }
     };
 
     right.press = () => {
-        barrel.vx = 5;
+        character.vx = 5;
         this.press = "right"
     };
     right.release = () => {
         if (this.press == "right") {
             this.press = undefined
-            barrel.vx = 0;
+            character.vx = 0;
         }
     };
 
     up.press = () => {
-        barrel.vy = -15
+        character.vy = -15
     };
     up.release = () => {
         // se resuelve en play()

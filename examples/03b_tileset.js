@@ -23,7 +23,7 @@ function setup() {
     let tx_under = textures["Jungle-Tileset_0012_under.png"];
     let tx_under_tipLeft = textures["Jungle-Tileset_0018_under_tip2.png"];
     let tx_under_tipRight = textures["Jungle-Tileset_0017_under_tip1.png"];
-    let tx_barrel = textures["Jungle-Tileset_0008_barrel.png"];
+    let tx_character = textures["Jungle-Tileset_0008_barrel.png"];
 
     
     let floor_tipLeft = new PIXI.Sprite(tx_floor_tipLeft);
@@ -65,9 +65,9 @@ function setup() {
     under_tipRight.y = umY(0)-4
     under_tipRight.x = 400
     
-    let barrel = new PIXI.Sprite(tx_barrel);
-    barrel.y = fmY(2)+4
-    barrel.x = fmX(3)
+    let character = new PIXI.Sprite(tx_character);
+    character.y = fmY(2)+4
+    character.x = fmX(3)
 
 
     // add it to the stage
@@ -84,5 +84,5 @@ function setup() {
     app.stage.addChild(under_tipRight);
     app.stage.addChild(under);
     
-    app.stage.addChild(barrel);
+    app.stage.addChild(character);
 }

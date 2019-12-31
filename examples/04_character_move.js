@@ -12,7 +12,7 @@ function setup() {
     let tx_under = textures["Jungle-Tileset_0012_under.png"];
     let tx_background = textures["Jungle-Tileset_0010_bg_trees.png"];
     let tx_background2 = textures["Jungle-Tileset_0011_bg.png"];
-    let tx_barrel = textures["Jungle-Tileset_0008_barrel.png"];
+    let tx_characterter = textures["Jungle-Tileset_0008_barrel.png"];
 
     let background2 = []
     for (let index = 0; index < 12; index++) {
@@ -46,29 +46,29 @@ function setup() {
         u.x = 155 * index
         app.stage.addChild(u);
     }
-    let barrel = new PIXI.Sprite(tx_barrel);
-    barrel.y = 160
-    barrel.x = window.innerWidth / 2 
-    barrel.vx = 0;
-    barrel.vy = 0;
+    let character = new PIXI.Sprite(tx_character);
+    character.y = 160
+    character.x = window.innerWidth / 2 
+    character.vx = 0;
+    character.vy = 0;
     
-    app.stage.addChild(barrel);
-    app.ticker.add(delta => gameLoop(barrel));
+    app.stage.addChild(character);
+    app.ticker.add(delta => gameLoop(character));
 }
 
-function gameLoop(barrel){
+function gameLoop(character){
     // move Horizontal
-    barrel.x += 4;
-    if(barrel.x > window.innerWidth){
-        barrel.x = -80
+    character.x += 4;
+    if(character.x > window.innerWidth){
+        character.x = -80
     }
     
     // move Vertical
-    barrel.vy += 1
-    if(barrel.y > 160 ){
-        barrel.vy = -15
-        barrel.y = 160
+    character.vy += 1
+    if(character.y > 160 ){
+        character.vy = -15
+        character.y = 160
     }
-    barrel.y += barrel.vy
+    character.y += character.vy
 
   }

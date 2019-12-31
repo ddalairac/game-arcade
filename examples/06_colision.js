@@ -2,15 +2,14 @@ PIXI.Loader.shared
     .add("images/Jungle-Tileset.json")
     .load(setup);
 
-    let state
+let state
 function setup() {
     let textures = PIXI.Loader.shared.resources["images/Jungle-Tileset.json"].textures;
     // set in level.js
-    setLevel(textures) 
+    setLevel(textures)
     setCharacter(textures)
     events()
     state = play
-    
 
     //Start the game loop 
     // delta is 1 if running at 100% performance
@@ -24,33 +23,36 @@ function gameLoop(delta) {
 
 
 function play(delta) {
-
     // move Horizontal
-    barrel.x += barrel.vx;
-    if (barrel.x > window.innerWidth) {
-        barrel.x = -80
+    character.x += character.vx;
+    if (character.x > window.innerWidth) {
+        character.x = -80
     }
 
-    if (barrel.x < -80) {
-        barrel.x = window.innerWidth
+    if (character.x < -80) {
+        character.x = window.innerWidth
     }
     // move Vertical
-        let floorColition = false
-        for (let index = 0; index < floor.length; index++) {
-            const element = floor[index];
-            floorColition = characterColition(barrel, floor[index],delta)
-            if(floorColition)break
-        }
-        if(floorColition && character.vy != 0){
-            level.y = 4
-        }else {
-            level.y = 0
-        }
-        barrel.y += barrel.vy
-        barrel.vy += 1 * delta
+    floor.forEach(element => { floorColition = characterColition(character, element)});
+    fllorVibration()
+    character.y += character.vy
+    character.vy += 1 * delta
 }
-function characterColition(character, element,delta) {
-    let character_base = character.y + character.height + character.vy  +4
+
+let floorColition
+let pendingVibration = false
+function fllorVibration(){
+    if (character.vy > 15) { pendingVibration = true }
+    if (floorColition && pendingVibration) {
+        console.log("floorColition && pendingVibration")
+        level.y = 4
+        pendingVibration = false
+    } else {
+        level.y = 0
+    }
+}
+function characterColition(character, element) {
+    let character_base = character.y + character.height + character.vy + 4
 
     if (character_base >= element.y) {
         character.vy = 0
