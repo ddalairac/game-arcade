@@ -33,7 +33,11 @@ function play(delta) {
         character.x = window.innerWidth
     }
     // move Vertical
-    floor.forEach(element => { floorColition = characterColition(character, element)});
+    floorColition = false
+    characterColition(character, floor)
+    characterColition(character, box)
+    // floor.forEach(element => { floorColition = characterColition(character, element) });
+    // box.forEach(element => { floorColition = characterColition(character, element) });
     fllorVibration()
     character.y += character.vy
     character.vy += 1 * delta
@@ -41,24 +45,32 @@ function play(delta) {
 
 let floorColition
 let pendingVibration = false
-function fllorVibration(){
+function fllorVibration() {
     if (character.vy > 15) { pendingVibration = true }
     if (floorColition && pendingVibration) {
-        console.log("floorColition && pendingVibration")
+        // console.log("floorColition && pendingVibration")
         level.y = 4
         pendingVibration = false
     } else {
         level.y = 0
     }
 }
-function characterColition(character, element) {
+function characterColition(character, elements) {
     let character_base = character.y + character.height + character.vy + 4
 
-    if (character_base >= element.y) {
-        character.vy = 0
-        character.y = element.y - character.height + 4
-        return true
-    } else {
-        return false
+    for (let i = 0; i < elements.length && !floorColition; i++) {
+        const element = elements[i];
+        if (character_base >= element.y
+            && character.x > element.x - character.width + 20
+            && character.x < element.x + character.width - 20
+        ) {
+            // console.log("r "+character.x+" > "+element.x - character.width)
+            character.vy = 0
+            character.y = element.y - character.height + 4
+            floorColition = true
+            break
+        } else {
+            // return false
+        }
     }
 }
