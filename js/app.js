@@ -28,3 +28,26 @@ let resources = PIXI.Loader.shared.resources
 let Sprite = PIXI.Sprite
 let TextureCache = PIXI.utils.TextureCache
 let Rectangle = PIXI.Rectangle
+let ParticleContainer = PIXI.ParticleContainer
+
+
+// PIXI.Loader.shared
+//     .add("images/Jungle-Tileset.json")
+//     .load(setup);
+
+// function setup() {
+//     let textures = PIXI.Loader.shared.resources["images/Jungle-Tileset.json"].textures;
+//     // set in level.js
+//     setLevel(textures) 
+//     setCharacter(textures)
+//     events()
+
+//     //Start the game loop 
+//     // delta is 1 if running at 100% performance
+//     app.ticker.add((delta) => gameLoop(delta));
+// }
+
+// function gameLoop(delta) {
+//     //Update the current game state:
+//     play(delta)
+// }

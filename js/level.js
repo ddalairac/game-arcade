@@ -1,5 +1,6 @@
 // get a reference to the sprite sheet we've just loaded:
 
+
 let level = new PIXI.Container();
 let background = []
 let background2 = []
@@ -27,7 +28,7 @@ function setLevel(textures) {
         bg.x = 418 * index
         level.addChild(bg);
     }
-    for (let index = 0; index < 12; index++) {
+    for (let index = 0; index < 20; index++) {
         floor.push(new PIXI.Sprite(tx_floor))
         const f = floor[index];
         f.y = 234
@@ -50,7 +51,7 @@ let barrel
 function setCharacter(textures) {
     let tx_barrel = textures["Jungle-Tileset_0008_barrel.png"];
     barrel = new PIXI.Sprite(tx_barrel);
-    barrel.y = 160
+    barrel.y = 0
     barrel.x = window.innerWidth / 2
     barrel.vx = 0;
     barrel.vy = 0;
@@ -59,27 +60,37 @@ function setCharacter(textures) {
 
 //Capture the keyboard arrow keys
 let left = keyboard("ArrowLeft"),
-up = keyboard("ArrowUp"),
-right = keyboard("ArrowRight")
-function events(){
+    up = keyboard("ArrowUp"),
+    right = keyboard("ArrowRight")
+    
+function events() {
     left.press = () => {
         barrel.vx = -5;
+        this.press = "left"
     };
     left.release = () => {
-        barrel.vx = 0;
+        if (this.press == "left") {
+            this.press = undefined
+            barrel.vx = 0;
+        }
     };
 
     right.press = () => {
         barrel.vx = 5;
+        this.press = "right"
     };
     right.release = () => {
-        barrel.vx = 0;
+        if (this.press == "right") {
+            this.press = undefined
+            barrel.vx = 0;
+        }
     };
 
     up.press = () => {
         barrel.vy = -15
     };
     up.release = () => {
-        // se resuelve en el loop
+        // se resuelve en play()
     };
 }
+
