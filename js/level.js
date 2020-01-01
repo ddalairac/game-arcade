@@ -10,6 +10,8 @@ let box = []
 function setLevel(textures) {
     // set textures
     let tx_floor = textures["Jungle-Tileset_0004_floor.png"];
+    let tx_floorLeft = textures["Jungle-Tileset_0002_floor_tip.png"];
+    let tx_floorRight = textures["Jungle-Tileset_0002_floor_tip2.png"];
     let tx_under = textures["Jungle-Tileset_0012_under.png"];
     let tx_background = textures["Jungle-Tileset_0010_bg_trees.png"];
     let tx_background2 = textures["Jungle-Tileset_0011_bg.png"];
@@ -36,6 +38,16 @@ function setLevel(textures) {
         f.x = 80 * index
         level.addChild(f);
     }
+    const f = new PIXI.Sprite(tx_floorLeft)
+    floor.push(f)
+    f.y = 154
+    f.x = 320
+    level.addChild(f);
+    const f2 = new PIXI.Sprite(tx_floorRight)
+    floor.push(f2)
+    f2.y = 154
+    f2.x = 400
+    level.addChild(f2);
     for (let index = 0; index < 12; index++) {
         under.push(new PIXI.Sprite(tx_under))
         const u = under[index];
@@ -48,7 +60,7 @@ function setLevel(textures) {
         box.push(new PIXI.Sprite(tx_box))
         const bx = box[index];
         bx.y = 156
-        bx.x =  700 //300 * index 
+        bx.x = 700 //300 * index 
         level.addChild(bx);
     }
 
@@ -71,27 +83,28 @@ function setCharacter(textures) {
 let left = keyboard("ArrowLeft"),
     up = keyboard("ArrowUp"),
     right = keyboard("ArrowRight")
-    
+
+let xDirection
 
 function events() {
     left.press = () => {
-        character.vx = -5;
-        this.press = "left"
+        character.vx = -5
+        xDirection = "left"
     };
     left.release = () => {
-        if (this.press == "left") {
-            this.press = undefined
+        if (xDirection == "left") {
+            xDirection = undefined
             character.vx = 0;
         }
     };
 
     right.press = () => {
         character.vx = 5;
-        this.press = "right"
+        xDirection = "right"
     };
     right.release = () => {
-        if (this.press == "right") {
-            this.press = undefined
+        if (xDirection == "right") {
+            xDirection = undefined
             character.vx = 0;
         }
     };
