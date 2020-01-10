@@ -16,6 +16,7 @@ function setLevel(textures) {
     let tx_background = textures["Jungle-Tileset_0010_bg_trees.png"];
     let tx_background2 = textures["Jungle-Tileset_0011_bg.png"];
     let tx_box = textures["Jungle-Tileset_0009_box.png"];
+    console.log("tx_floor",tx_floor)
 
     for (let index = 0; index < 12; index++) {
         background2.push(new PIXI.Sprite(tx_background2))
@@ -31,7 +32,7 @@ function setLevel(textures) {
         bg.x = 418 * index
         level.addChild(bg);
     }
-    for (let index = 0; index < 20; index++) {
+    for (let index = 0; index < 30; index++) {
         floor.push(new PIXI.Sprite(tx_floor))
         const f = floor[index];
         f.y = 234
@@ -48,7 +49,7 @@ function setLevel(textures) {
     f2.y = 154
     f2.x = 400
     level.addChild(f2);
-    for (let index = 0; index < 12; index++) {
+    for (let index = 0; index < 13; index++) {
         under.push(new PIXI.Sprite(tx_under))
         const u = under[index];
         u.y = 316
